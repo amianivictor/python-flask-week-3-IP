@@ -16,3 +16,7 @@ class CommentForm(FlaskForm):
     comment = TextAreaField('Comment', validators=[Required()])
     submit = SubmitField('Post')
 
+
+class Vote(FlaskForm):
+    submit = SelectField('Like')
+
