@@ -2,13 +2,11 @@
 
 
 
-## By Sharonne Kemboi
+## By victor
 
 > This is a Flask application that allows users to submit their one minute pitches and other users to vote on them and leave comments of their feedback on them. The pitches are organized by category. 
 
 ### Screenshot of the App
-<img src="https://github.com/SharonneKemboi/Utmost-Pitch-App/blob/master/app/static/photos/Screen1.png">
-<img src="https://github.com/SharonneKemboi/Utmost-Pitch-App/blob/master/app/static/photos/Screen3.png">
 
 
 ## Table of Content
@@ -50,7 +48,7 @@ $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 ```
  
 1.Download and install Git by writting the above ($ sudo apt install git-all)
-  Clone this [github repo] (https://github.com/SharonneKemboi/Utmost-Pitch-App.git)
+  Clone this [github repo] ()
 2. Ensure python is installed on your machine($ sudo apt-get install python3.8)
 3. On the terminal for linux or command prompt for windows;
   * Open the containing folder by cd.
@@ -115,7 +113,7 @@ $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 
 > [MIT License](license) this application's source code is free for any open source projects
 
-> Copyright (c) 2022 **Sharonne Kemboi**
+> Copyright (c) 2022 **victor**
 
 
 
@@ -124,6 +122,6 @@ $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 
 > If you have any questions,comments or advice,feel free to contact me
 
-* [Email](sharonnekay23@gmail.com)
-* [LinkedIn](https://www.linkedin.com/in/sharonne-vanessa-kemboi-a118bb135)
+* [Email]()
+* [LinkedIn]()
 
