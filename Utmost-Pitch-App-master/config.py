@@ -27,8 +27,10 @@ class ProdConfig(Config):
         Config - this is the parent config class from which we inherit its properties
     """
     # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL").replace("postgres://", "postgresql://", 1)
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:vkey001@localhost/pitchapp'
-
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:vkey001@localhost/pitchapp'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL","")
+    if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+        SQLALCHEMY_DATABASE_URI =SQLALCHEMY_DATABASE_URI.replace("postgres://","postgresql://",)
     # uri = os.environ.get("DATABASE_URL")  # or other relevant config var
     # if uri.startswith("postgres://"):
     #     uri = uri.replace("postgres://", "postgresql://", 1)
