@@ -4,8 +4,8 @@ class Config:
     '''
     General configuration parent class
     '''
-    # SECRET_KEY = os.environ.get('SECRET_KEY')
-    SECRET_KEY = 'mySecret'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    # SECRET_KEY = 'mySecret'
     UPLOADED_PHOTOS_DEST = "app/static/photos"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     
@@ -14,10 +14,10 @@ class Config:
     MAIL_SERVER = "smtp.gmail.com"
     MAIL_PORT = 587
     MAIL_USE_TLS = True
-    # MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-    # MAIL_PASSWORD  = os.environ.get("MAIL_PASSWORD")
-    MAIL_USERNAME = 'MAIL_USERNAME'
-    MAIL_PASSWORD = 'MAIL_PASSWORD'
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD  = os.environ.get("MAIL_PASSWORD")
+    # MAIL_USERNAME = 'MAIL_USERNAME'
+    # MAIL_PASSWORD = 'MAIL_PASSWORD'
 
 
 class ProdConfig(Config):
