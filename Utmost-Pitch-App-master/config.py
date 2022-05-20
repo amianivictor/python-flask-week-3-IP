@@ -5,6 +5,7 @@ class Config:
     General configuration parent class
     '''
     SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:1234@localhost/vkey'
     # SECRET_KEY = 'mySecret'
     UPLOADED_PHOTOS_DEST = "app/static/photos"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
@@ -28,9 +29,9 @@ class ProdConfig(Config):
     """
     # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL").replace("postgres://", "postgresql://", 1)
     # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:vkey001@localhost/pitchapp'
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL","")
-    if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
-        SQLALCHEMY_DATABASE_URI =SQLALCHEMY_DATABASE_URI.replace("postgres://","postgresql://",)
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    if SQLALCHEMY_DATABASE_URI and SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+        SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://", 1)
     # uri = os.environ.get("DATABASE_URL")  # or other relevant config var
     # if uri.startswith("postgres://"):
     #     uri = uri.replace("postgres://", "postgresql://", 1)
@@ -41,7 +42,7 @@ class TestConfig(Config):
     Args:
         Config - this is the parent config class from which we inherit its properties
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:vkey001@localhost/pitches_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:1234@localhost/vkey'
 
 
 class DevConfig(Config):
@@ -50,7 +51,7 @@ class DevConfig(Config):
     Args:
         COnfig - this is the parent config class from which we inherit its properties
     """
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:vkey001@localhost/pitchapp'
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:vkey001@localhost/pitchapp'
 
     DEBUG = True
 
